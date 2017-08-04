@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/MasterStyle.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <!-- NAVBAR SECTION -->
+        <nav class="navbar navbar-default navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><b>Noni's Kitchen</b></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <asp:HyperLink ID="Home" NavigateUrl="~/pages/Default.aspx" runat="server" CssClass="list-group-item"><i class="fa fa-home" aria-hidden="true"></i> HOME</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="Recipe" NavigateUrl="~/pages/Recipes.aspx" runat="server" CssClass="list-group-item"><i class="fa fa-book" aria-hidden="true"></i> Browse Recipes</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="AddRecipe" NavigateUrl="~/pages/AddRecipe.aspx" runat="server" CssClass="list-group-item"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Recipe</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HomeLink" NavigateUrl="~/pages/Search.aspx" runat="server" CssClass="list-group-item"><i class="fa fa-search" aria-hidden="true"></i> Search</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:Label ID="usrLogged" runat="server" Text=""></asp:Label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+        </div>
+        <asp:ContentPlaceHolder ID="Body" runat="server">
+        </asp:ContentPlaceHolder>
+        <script src="Scripts/jquery-3.1.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>

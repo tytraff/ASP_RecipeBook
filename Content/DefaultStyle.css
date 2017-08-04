@@ -1,0 +1,42 @@
+﻿body {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.jumbotron {
+    margin-top: -20px;
+    background-image: url('../Content/img/0_Krown-produce-home-banner-tomato_l.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.jumbotext {
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight: 200;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2rem;
+    width: 45%;
+    float: right;
+}
+
+    .jumbotext h1 {
+        font-size: 405%;
+        font-weight: 500;
+    }
+
+    .jumbotext p {
+        font-size: 305%;
+        font-weight: 200;
+    }
+
+@media screen and (max-width: 500px) {
+    .jumbotext {
+        width: 90%;
+        font-size: 75%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-device-width: 800px) {
+}
